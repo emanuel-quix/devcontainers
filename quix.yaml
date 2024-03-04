@@ -9,23 +9,28 @@ deployments:
   - name: financefeeder
     application: financefeeder
     deploymentType: Service
-    version: 2c86c465dad83b85f05279dde0039e3ecdea9954
+    version: 35f04467ad832cf0c6a0752926493a28d7490380
     resources:
       cpu: 200
       memory: 500
       replicas: 1
     desiredStatus: Running
     variables:
-      - name: input
-        inputType: InputTopic
-        description: This is the input topic to read data from
-        required: true
-        value: first_topic
-      - name: output
+      - name: TRADES_TOPIC
         inputType: OutputTopic
         description: This is the output topic to write data to
         required: true
-        value: output-topic
+        value: trades
+      - name: FINHUB_ENDPOINT
+        inputType: FreeText
+        description: ''
+        required: false
+        value: wss://ws.finnhub.io
+      - name: FINHUB_TOKEN
+        inputType: FreeText
+        description: ''
+        required: false
+        value: cn22fv1r01qmg1p4cp9gcn22fv1r01qmg1p4cpa0
 
 # This section describes the Topics of the data pipeline
 topics:
