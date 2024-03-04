@@ -1,10 +1,10 @@
 name: financefeeder
 language: python
 variables:
-  - name: output
+  - name: TRADES_TOPIC
     inputType: OutputTopic
     description: This is the output topic to write data to
-    defaultValue: output-topic
+    defaultValue: trades
     required: true
 dockerfile: dockerfile
 runEntryPoint: main.py
