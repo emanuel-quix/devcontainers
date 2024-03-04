@@ -14,7 +14,7 @@ variables:
   - name: FINHUB_TOKEN
     inputType: FreeText
     description: ''
-    defaultValue: ''
+    defaultValue: cn22fv1r01qmg1p4cp9gcn22fv1r01qmg1p4cpa0
     required: false
 dockerfile: dockerfile
 runEntryPoint: main.py
