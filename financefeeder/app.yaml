@@ -9,7 +9,7 @@ variables:
   - name: FINHUB_ENDPOINT
     inputType: FreeText
     description: ''
-    defaultValue: ''
+    defaultValue: wss://ws.finnhub.io
     required: false
   - name: FINHUB_TOKEN
     inputType: FreeText
