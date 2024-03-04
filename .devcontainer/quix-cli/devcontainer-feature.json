@@ -1,0 +1,9 @@
+{
+    "name": "Quix CLI",
+    "id": "quix-cli",
+    "version": "1.0.0",
+    "description": "Quix CLI",
+    "dependsOn": {
+        "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+    }
+}

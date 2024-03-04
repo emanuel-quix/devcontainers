@@ -1,0 +1,17 @@
+{
+    "build": { "dockerfile": "Dockerfile" },
+    // "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye"
+    // "image":"python:3.11.1-slim-buster",
+    "postCreateCommand": "find | grep requirements.txt | xargs -I '{}' python3 -m pip install -r '{}' --extra-index-url https://pkgs.dev.azure.com/quix-analytics/53f7fe95-59fe-4307-b479-2473b96de6d1/_packaging/public/pypi/simple/",
+    "features": {
+        "./quix-cli": {},
+        "./quix-streams": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-python.python"]
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.quix,target=/home/.quix,type=bind,consistency=cached"]
+}

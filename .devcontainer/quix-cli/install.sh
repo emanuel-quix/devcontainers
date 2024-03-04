@@ -1,0 +1,1 @@
+curl -fsSL https://github.com/quixio/quix-cli/raw/main/install.sh | bash
