@@ -12,5 +12,5 @@
         }
     },
     "mounts": [
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.quix,target=/root/.quix,type=bind,consistency=cached"]
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.quix,target=/home/vscode/.quix,type=bind,consistency=cached"]
 }
