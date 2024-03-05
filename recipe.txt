@@ -1,0 +1,2 @@
+quix local deploy --directory ./financefeeder
+quix workspaces sync quixdev-emanueldevcontainers-prod
