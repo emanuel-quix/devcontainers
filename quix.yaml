@@ -5,7 +5,31 @@ metadata:
   version: 1.0
 
 # This section describes the Deployments of the data pipeline
-deployments: []
+deployments:
+  - name: financefeeder
+    application: financefeeder
+    deploymentType: Service
+    version: latest
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    variables:
+      - name: TRADES_TOPIC
+        inputType: OutputTopic
+        description: This is the output topic to write data to
+        required: true
+        value: trades
+      - name: FINHUB_ENDPOINT
+        inputType: FreeText
+        description: ''
+        required: false
+        value: wss://ws.finnhub.io
+      - name: FINHUB_TOKEN
+        inputType: FreeText
+        description: ''
+        required: false
+        value: cn22fv1r01qmg1p4cp9gcn22fv1r01qmg1p4cpa0
 
 # This section describes the Topics of the data pipeline
 topics:
